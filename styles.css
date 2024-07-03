@@ -11,11 +11,11 @@ main{
     justify-content:space-evenly;
     margin:5px auto;
 }
-.button{
+.button,.equal{
     width:75px;
     border:1px solid red;
 }
-.button:hover{
+.button:hover,.equal:hover{
     cursor:pointer;
 }
 .num{
@@ -63,7 +63,7 @@ main{
 #equal{
     width:75px;
 }
-.button.equal{
+.equal{
     width:70px;
     height:99%;
 }
@@ -73,5 +73,13 @@ main{
     margin:30px auto;
     border-radius:5px;
     background-color:whitesmoke;
-    font-size:8rem;
+    font-size:4rem;
+}
+
+button{
+    width:400px;
+    display:block;
+    margin:10px auto;
+    height:4rem;
+    font-size:1.5rem;
 }
