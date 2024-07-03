@@ -39,11 +39,11 @@ const addButtonContentToScreen = (event) => {
     if(numButtonAllowed){
         screen.textContent+=event.target.textContent;
         if(numOneBeingProcessed){
-            num1+=parseInt(event.target.id);
+            num1+=event.target.id;
             operationAllowed=true;
         }
         else{
-            num2+=parseInt(event.target.id);
+            num2+=event.target.id;
             canShowResult=true;
             operationAllowed=false;
         }
@@ -64,8 +64,8 @@ const processOperateButton = (event) => {
 }
 const processEqualButton = (event) => {
     if(canShowResult){
-        screen.textContent=operate(num1,num2,operation);
-        num1=operate(num1,num2,operation);
+        screen.textContent=operate(parseInt(num1),parseInt(num2),operation);
+        num1=operate(parseInt(num1),parseInt(num2),operation);
         num2=0;
         canShowResult=false;
         operationAllowed=true;
@@ -80,15 +80,15 @@ const clearScreen = () => {
     numButtonAllowed=true;
     numOneBeingProcessed=true;
     numTwoBeingProcessed=false;
-    num1=0;
-    num2=0;
+    num1="";
+    num2="";
 }
 clearButton.addEventListener("click",clearScreen);
 //clearing screen code//
 //********************************************************************************/
 //getting user input//
-let num1=0;
-let num2=0;
+let num1="";
+let num2="";
 numButtons.forEach((numButton)=> {
     numButton.addEventListener("click",addButtonContentToScreen);
 })
