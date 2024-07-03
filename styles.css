@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+main{
+    display:flex;
+    border:1px solid black;
+    width:400px;
+    height:400px;
+    border-radius:5px;
+    justify-content:space-evenly;
+    margin:5px auto;
+}
+.button{
+    width:75px;
+    border:1px solid red;
+}
+.button:hover{
+    cursor:pointer;
+}
+.num{
+    height:95px;
+}
+#numbers{
+    display:flex;
+    flex-wrap:wrap;
+    width:240px;
+}
+#numbers1{
+    display:flex;
+    width:240px;
+    flex-wrap:wrap;
+    height:300px;
+    justify-content:space-evenly;
+    align-content:space-evenly;
+}
+.zero{
+    width:240px;
+    height:95px;
+}
+#numbers2{
+    width:240px;
+    display:flex;
+    justify-content:space-evenly;
+    align-content:center;
+}
+.num, .zero,.operate,#equal,.equal{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+}
+#operations{
+    height:400px;
+    width:75px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+.operate{
+    height:95px;
+}
+#equal{
+    width:75px;
+}
+.button.equal{
+    width:70px;
+    height:99%;
+}
+.screen{
+    width:400px;
+    height:180px;
+    margin:30px auto;
+    border-radius:5px;
+    background-color:whitesmoke;
+    font-size:8rem;
+}
